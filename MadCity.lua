@@ -123,9 +123,8 @@ end
                     end
             end)
 
-            MainSection:NewButton("Auto Rob", "Auto Rob Made by Jxnt", function(v)
-                game.ReplicatedStorage.Event:FireServer("Dialogue",{{Text="<Color=Yellow>Infomation<Color=/> \n\n <Color=Green> Autorob staret, <Color=Purple> made by Jxnt#9946",Delay=3}})
-                loadstring(game:HttpGet('https://system-exodus.com/scripts/madcity/MadLadsAR.lua',true))()
+            MainSection:NewButton("Auto Rob", "autorob", function(v)
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/shopv8.10113%20mc_bypass.lua', true))()
             end)
 
             ExtrasSection:NewButton("Kick you self", " can you read? kick you self!!!", function(v)
@@ -138,18 +137,9 @@ end
                 Victim:kick("did you really think it was possible? hahaha")
             end)
 
-            MainSection:NewButton("Xp Farm", "Farm Xp (switch Team to stop)", function(v)
-                game.ReplicatedStorage.Event:FireServer("Dialogue",{{Text="<Color=Yellow>Infomation<Color=/> \n\n <Color=Green> Starting Xp Farm",Delay=3}})
-                game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer("SetTeam", "Police")
-wait(.75)
-game:GetService("RunService").RenderStepped:Connect(function()
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v.Name == "Handcuffs" then v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game:GetService("ReplicatedStorage").Event:FireServer("Eject", game:GetService("Players").LocalPlayer)
-end)        
-            end)
+            MainSection:NewButton("Xp Farm", "Rejoin to stop", function(v)
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/XP-FARM-1MIN.lua', true))()
+       end)
         
 
                 MiscSection:NewButton("Kill all", "Kill's all criminals", function(v)
